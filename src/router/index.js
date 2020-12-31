@@ -3,19 +3,14 @@ import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: () => import('../views/Home.vue'),
+    name: 'booksList',
+    component: () => import('../views/BooksList.vue'),
 
   },
   {
     path: '/edit/:id',
     name: 'editBook',
     component: () => import('../views/EditBook.vue'),
-  },
-  {
-    path: '/bookslist',
-    name: 'booksList',
-    component: () => import('../views/BooksList.vue'),
   },
 ];
 
