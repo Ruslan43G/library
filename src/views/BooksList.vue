@@ -83,10 +83,12 @@ export default {
     clearFilterState() {
       this.saveFilterState(null);
       this.filter = null;
+      this.setBookFilter(this.filter);
     },
     clearSortState() {
       this.saveSortState(null);
       this.sorted = null;
+      this.setBookSort(this.sorted);
     },
   },
   computed: {
@@ -133,13 +135,10 @@ export default {
     text-align: center;
     margin: 0 0 30px 0;
   }
-
   button {
     margin-top: 15px;
   }
-
   .subtitle {
     max-width: 60%;
   }
-
 </style>

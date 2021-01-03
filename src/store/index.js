@@ -29,8 +29,8 @@ export default createStore({
     createBook: ({ commit }, newBook) => commit('addBook', newBook),
     editBook: ({ commit }, data) => commit('updateBook', data),
     deleteBook: ({ commit }, id) => commit('delBook', id),
-    setBookFilter: ({ commit }, value) => console.log(`vuex ${value}`) || commit('setFilter', value),
-    setBookSort: ({ commit }, value) => console.log(`vuex ${value}`) || commit('setSort', value),
+    setBookFilter: ({ commit }, value) => commit('setFilter', value),
+    setBookSort: ({ commit }, value) => commit('setSort', value),
   },
   getters: {
     getAllBooks: (state) => state.books.books,
@@ -45,7 +45,6 @@ export default createStore({
       .genres.map((g) => ({ tag: g })),
     getFilteredBooks: (state, getters) => {
       const filteredBooks = getters.getAllBooks.slice(0);
-      console.log(filteredBooks);
       if (!state.books.filter) {
         return filteredBooks;
       }
