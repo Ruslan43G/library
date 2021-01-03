@@ -74,11 +74,9 @@ export default {
     ...mapActions(['setBookFilter', 'setBookSort']),
     saveFilterState(value) {
       this.$router.push({ name: 'booksList', query: { ...this.$route.query, filter: value } });
-      console.log(`onChange ${value}`);
     },
     saveSortState(value) {
       this.$router.push({ name: 'booksList', query: { ...this.$route.query, sort: value } });
-      console.log(`onChange ${value}`);
     },
     clearFilterState() {
       this.saveFilterState(null);

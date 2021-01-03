@@ -54,6 +54,7 @@ export default {
     ...mapActions(['editBook', 'deleteBook']),
     updateBook() {
       this.editBook(this.book);
+      this.$router.push({ name: 'booksList' });
     },
     bookDelete() {
       this.$router.push({ name: 'booksList' });

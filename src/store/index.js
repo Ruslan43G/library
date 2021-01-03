@@ -15,8 +15,8 @@ export default createStore({
       id, title, author, genres,
     }) => {
       const index = state.books.books.findIndex((book) => book.id === id);
-      state.books[index] = {
-        ...state.books[index], title, author, genres,
+      state.books.books[index] = {
+        ...state.books.books[index], title, author, genres,
       };
     },
     delBook: (state, id) => {
